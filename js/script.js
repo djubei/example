@@ -53,6 +53,18 @@ console.log(--m)
 */
 
 //==================================================================================
+//создать репозиторий из консоли
+//установить GitHub CLI
+//авторизоваться gh auth login
+//git init
+//gh repo create
+//gh repo create myRepo
+//Here is an example of a more complex configuration:
+//gh repo create myAwesomeRepo --public -d 'my description' --enable-issues=false
+//To see more options when creating a repo, you can always ask for help:
+//gh repo create --help
+
+
 //git init -инициализация репозитория
 //git config --global user.name "Max" имя
 //git config --global user.email "djubaiy@gmail.com" имя
@@ -62,6 +74,19 @@ console.log(--m)
 //git commit -a -m""   добавить контрольную точку -а - значит всё -m значит комментарий к коммиту
 //git log   посмотреть какие коммиты были
 
+
+// для того чтобы залить данные в созданый на гите репозиторий
+// создать свой репозиторий
+// echo "# имя" >> README.md
+// git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M master
+// git remote add origin git@github.com:djubei/sadas.git       имя репозитория(ссылка)
+// git push -u origin master
+
+//git remote add origin git@github.com:User/UserRepo.git       связать локальный репозиторий с гитом
+//git push -u origin main запушить локальный репозиторий в папку на гите
 
 
 
