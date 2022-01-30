@@ -63,6 +63,11 @@ console.log(--m)
 //gh repo create myAwesomeRepo --public -d 'my description' --enable-issues=false
 //To see more options when creating a repo, you can always ask for help:
 //gh repo create --help
+// потом пишем git add -A  ==>
+//git commit -a -m"first commit"  ==>
+//git push  ==>
+//git remote add origin git@github.com:User/UserRepo.git  ==>     связать локальный репозиторий с гитом
+//git push -u origin main   ==> запушить локальный репозиторий в папку на гите
 
 
 //git init -инициализация репозитория
