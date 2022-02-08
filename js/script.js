@@ -110,4 +110,5 @@ console.log(--m)
 //git rm -r --cached .idea  -имя папки
 //В .gitignore должно быть просто .idea/
 
-
+//ошибка LF will be replaced by CRLF
+//устранить git config core.autocrlf true
