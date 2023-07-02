@@ -60,7 +60,7 @@ console.log(--m)
 //gh repo create
 //gh repo create myRepo
 //Here is an example of a more complex configuration:
-//gh repo create myAwesomeRepo --public -d 'my description' --enable-issues=false
+//gh repo create agile-board --public -d 'my description' --enable-issues=false
 //To see more options when creating a repo, you can always ask for help:
 //gh repo create --help
 // потом пишем git add -A  ==>
@@ -68,6 +68,9 @@ console.log(--m)
 //git push  ==>
 //git remote add origin git@github.com:User/UserRepo.git  ==>     связать локальный репозиторий с гитом
 //git push -u origin main   ==> запушить локальный репозиторий в папку на гите
+//git checkout -b 'name_branch'
+//git push --set-upstream origin name_branch запушить ветку на репозиторий в первый раз в новой ветке
+//git checkout 'branch_name' перейти на ветку
 
 
 //git init -инициализация репозитория
@@ -85,8 +88,8 @@ console.log(--m)
 // echo "# имя" >> README.md
 // git init
 // git add README.md
-// git commit -m "first commit"
-// git branch -M master
+// git commit -m "initial commit"
+// git branch -M main
 // git remote add origin git@github.com:djubei/sadas.git       имя репозитория(ссылка)
 // git push -u origin master
 
@@ -112,3 +115,41 @@ console.log(--m)
 
 //ошибка LF will be replaced by CRLF
 //устранить git config core.autocrlf true
+
+//shit+rightMouse - покажет в меню запуск терминала
+
+//стандартные настройки jshint
+// .jshintrc
+// {
+//   "camelcase" : true,
+//   "indent": 2,
+//   "undef": true,
+//   "quotmark": false,
+//   "maxlen": 120,
+//   "trailing": true,
+//   "curly": true,
+//   "strict": false,
+//   "browser": true,
+//   "devel": true,
+//   "jquery": true,
+//   "esversion": 9,
+//   "node": true
+// }
+
+//'use strict' - строгий режим
+
+
+let a = false
+let b = false
+let c = false
+let d = false
+
+let e = false
+
+let a = (...rest) => {
+  return rest.filter(it => it).length >= 2
+}
+
+if (!a && !b || !a && !c || !a && !d || !b && !c || !b && !d || !c && !d) {
+  e = true
+}

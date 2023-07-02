@@ -1,0 +1,72 @@
+/*General Style*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'sans-serif';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://media.istockphoto.com/id/1160396923/photo/top-view-of-open-notebooks-with-pen-on-wood-background-school-notebook-with-spiral-spring.jpg?s=612x612&w=0&k=20&c=MYRGrvRte7e33OpzOFQyNLuLxcZb3-DX3sZfSvHkluA=") no-repeat center center/ cover;
+}
+
+.accordion {
+    padding: 30px;
+    width: 65%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.accordion .accordion-title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.accordion .content-container {
+
+}
+
+.accordion .content-container .question {
+    cursor: pointer;
+    font-size: 22px;
+    padding: 18px 0;
+    border-bottom: 2px black solid;
+    position: relative;
+}
+
+.accordion .content-container .question::after {
+    position: absolute;
+    content: '+';
+    right: -5px;
+}
+
+.accordion .content-container .answer {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 1.5;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.accordion .content-container.clicked .question::after {
+    position: absolute;
+    content: '-';
+    right: -5px;
+}
+
+.accordion .content-container.clicked .answer {
+    height: 150px;
+}
+
+.accordion .content-container.clicked .question {
+    font-size: 18px;
+    transition: 0.5s;
+}

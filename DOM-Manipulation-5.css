@@ -1,0 +1,116 @@
+/*General Style*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'sans-serif';
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url("https://images.pling.com/img/00/00/67/53/74/1901113/1000-f-520229354-pwwg2yiyc2fs4eh5ipgbxthrqqbxn7mt.jpg") no-repeat center center/ cover;
+}
+
+.open-modal {
+    position: absolute;
+    margin: 0;
+    top: 75%;
+    left: 15%;
+    border: 1px solid white;
+    padding: 10px 10px;
+    width: 300px;
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    opacity: 0.6;
+    transition: 0.8s;
+
+}
+
+
+.open-modal:hover {
+    cursor: pointer;
+    transition: 0.8s;
+    background: rgba(255, 255, 255, 10);
+    color: black;
+    opacity: 1;
+}
+
+.open-modal:active {
+    transition: 0.1s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 10);
+
+}
+
+.modal-container {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: white;
+    height: 50px;
+    width: 100px;
+
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    opacity: 0;
+    animation: modal-animation .5s linear forwards;
+}
+
+
+@keyframes modal-animation {
+
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+}
+
+.close-modal {
+    cursor: pointer;
+}
+
+.close-modal:before, .close-modal:after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    background: black;
+}
+
+.close-modal:before {
+    transform: rotate(45deg);
+}
+
+.close-modal:after {
+    transform: rotate(-45deg);
+}
+
+/*
+<div class="close-modal">&times;</div>*/
